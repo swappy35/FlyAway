@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Search Page</title>
+</head>
+<body>
+	<center>
+	<h1>Travel Details</h1>
+    <form action="search_page_process.jsp" method="post">
+    	Date of Travel: <input type="date" name="DOT"/>
+    	<br><br>
+				<label for="SCity">Source City: </label>
+					<select name="SCity" id="SCity">
+						<option value="null" ></option>
+						<option value="Delhi" >Delhi</option>
+  						<option value="Mumbai" >Mumbai</option>
+  						<option value="Chennai" >Chennai</option>
+ 						<option value="Kolkata" >Kolkata</option>
+					</select>
+            <br><br>
+				<label for="DCity">Destination City: </label>
+					<select name="DCity" id="DCity">
+						<option value="null" ></option>
+						<option value="Delhi" >Delhi</option>
+  						<option value="Mumbai" >Mumbai</option>
+  						<option value="Chennai" >Chennai</option>
+ 						<option value="Kolkata" >Kolkata</option>
+					</select>
+            <br><br>
+                Number of Persons: <input type="number" name="NPersons" size="2" />
+        <br><br>
+        <input type="submit" value="Search" />
+        &emsp;&emsp;
+        <input type="reset" value="Reset" />
+    </form>	
+    </center>
+    
+</body>
+</html>
