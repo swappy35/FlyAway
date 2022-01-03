@@ -9,7 +9,7 @@
 <body>
 	<center>
 	<h1>User Login Form</h1>
-    <form action="register" method="post">
+    <form action="login_process.jsp" method="post">
         <table cellpadding="3pt">
             <tr>
                 <td>Email :</td>
