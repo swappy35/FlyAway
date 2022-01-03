@@ -16,14 +16,11 @@
 		url="jdbc:mysql://localhost:3306/flyaway"
 		user="root" password="root"/>
 		
+	<!-- Dynamic password in local variable -->
 	<c:set var="P1" value="${param.password1}"/>
 	<c:set var="P2" value="${param.password2}"/>
 		
 	<!-- Query to access DB -->
-	<c:if test="${P1 == P2 }">
-
-	</c:if>
-	
 	<c:choose>  
 		<c:when test="${P1 == P2}">  
 			<sql:update var="Reg" dataSource="${db}">
@@ -32,32 +29,20 @@
 				<sql:param value="${param.password1}"/>
 			</sql:update> 
 			<center>
-			<h3>Thank You for Registration!</h3><br>
-			Please login, <a href="login.jsp">Here</a>.
+				<h3>Thank You for Registration!</h3><br>
+				Please <a href="login.jsp">login</a> here.
 			</center>
     	</c:when> 
     	<c:when test="${P1 != P2 }">  
     		<center>
-			<h3>Password not matching</h3><br>
-			Please try again, <a href="register.jsp">Here</a>.
+				<h3>Password not matching</h3><br>
+				Please try again, <a href="register.jsp">Click here</a>.
 			</center>
-    	</c:when>  
-    	<c:when test="${Edb == E && Pdb != P}">  
-        	Wrong Password & try again.
-    	</c:when>  
+    	</c:when>    
     	<c:otherwise>  
        		Check credentials & try again.
     	</c:otherwise>  
 	</c:choose>  
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		
 </body>
 </html>
