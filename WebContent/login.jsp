@@ -13,11 +13,11 @@
         <table cellpadding="3pt">
             <tr>
                 <td>Email :</td>
-                <td><input type="text" name="email" size="30" /></td>
+                <td><input type="email" name="email" size="30" required/></td>
             </tr>
             <tr>
                 <td>Password :</td>
-                <td><input type="password" name="password" size="30" /></td>
+                <td><input type="password" name="password" size="30" required/></td>
             </tr>
         </table>
         <br>

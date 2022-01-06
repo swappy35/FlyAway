@@ -39,7 +39,7 @@
     	<c:when test="${Edb == E && Pdb == P}">  
     		<center>
 				<h3>Login Successful.</h3><br>
-				Proceed to <a href="search_page.html">search page</a>.
+				Proceed to <a href="search_page.jsp">search page</a>.
 			</center>
     	</c:when>  
     	<c:when test="${Edb == E && Pdb != P}">  
