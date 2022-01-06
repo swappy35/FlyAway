@@ -11,19 +11,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-<h3>Trigger Button Click on Enter</h3>
-<p>Press the "Enter" key inside the input field to trigger the button.</p>
-
-<button id="myBtn" onclick="javascript:alert('Hello World!')">Button</button>
-
-<c:set var="a" value="${1101 }"></c:set>
-<table>
-<tr>
-<td><a href="edit?id=<c:out value="${a}"/>"> Click 1</a></td>
-
-</tr>
-</table>
-
+	<c:set var="np" value="10"/>
+	<c:set var="TS" value="5"/>
+    <c:set var="as" value="${TS-np }"/>
+    <c:out value="${as }"></c:out>
 </body>
 </html>
