@@ -23,7 +23,8 @@ table, th, td {
 		
 	<!-- Insert into Search Details Table -->
 	<sql:update var="SPP" dataSource="${db}">
-		insert into Search_Details values(?,?,?,?);
+		insert into Search_Details values(S_No_Search = ?,?,?,?,?);
+		<sql:param value="${param.NPersons}"/>
 		<sql:param value="${param.DOT}"/>
 		<sql:param value="${param.SCity}"/>
 		<sql:param value="${param.DCity}"/>
