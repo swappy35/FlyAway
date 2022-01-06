@@ -20,8 +20,17 @@ table, th, td {
 	<sql:setDataSource var="db" driver="com.mysql.jdbc.Driver"
 		url="jdbc:mysql://localhost:3306/flyaway"
 		user="root" password="root"/>
+		
+	<!-- Insert into Search Details Table -->
+	<sql:update var="SPP" dataSource="${db}">
+		insert into Search_Details values(?,?,?,?);
+		<sql:param value="${param.DOT}"/>
+		<sql:param value="${param.SCity}"/>
+		<sql:param value="${param.DCity}"/>
+		<sql:param value="${param.NPersons}"/>
+	</sql:update>		
 	
-	<!-- Query to access DB -->
+	<!-- Query to Flight Details Table -->
 	<sql:query var="SPP" dataSource="${db}">
 		select * from Flight_Details where DOT=? AND Src_City=? AND Dest_City=? AND Available_Seat >=?;
 		<sql:param value="${param.DOT}"/>
@@ -29,7 +38,6 @@ table, th, td {
 		<sql:param value="${param.DCity}"/>
 		<sql:param value="${param.NPersons}"/>
 	</sql:query>
-	
 	
 	<c:choose>
 		<c:when test="${!empty SPP.rows}">
@@ -41,10 +49,10 @@ table, th, td {
 							<th>Flight No.</th>
 							<th>Airline Name</th>
 							<th>Price</th>
-							<th>Src City</th>
-							<th>Dep Time</th>
-							<th>Dest City</th>
-							<th>Arr Time</th>
+							<th>Source City</th>
+							<th>Departure Time</th>
+							<th>Destination City</th>
+							<th>Arrival Time</th>
 							<th>Total Seat</th>
 							<th>Booked Seat</th>
 							<th>Available Seat</th>
@@ -53,7 +61,7 @@ table, th, td {
 						</tr>
 					<c:forEach var="row" items="${SPP.rows}">
     					<tr>
-        					<td><a href="personaldetails.jsp?fno=<c:out value="${row.Flight_No }"/>"> ${row.Flight_No }</a></td>
+        					<td><a href="personal_details.jsp?fno=<c:out value="${row.Flight_No }"/>"> ${row.Flight_No }</a></td>
         					<td><c:out value="${row.Airline_Name }"/></td>
         					<td><c:out value="${row.Price }"/></td>
         					<td><c:out value="${row.Src_City }"/></td>
@@ -82,12 +90,5 @@ table, th, td {
 		</c:otherwise>
 	</c:choose>
 
-	
-
-	
-	<c:set var="DOJ" value="${param.DOT }"/>
-	<c:set var="SrcCiy" value="${param.SCity }"/>
-	<c:set var="DesCity" value="${param.DCity }"/>
-	<c:set var="NP" value="${param.NPersons }"/>
 </body>
 </html>
