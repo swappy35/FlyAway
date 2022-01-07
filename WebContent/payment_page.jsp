@@ -67,5 +67,13 @@
 	<h3>For further more booking, <a href="dashboard.html">Click Here</a>.</h3>
 	<h3>Close the site, if done.</h3>
 	</center>
+	<br><br><br><br>
+	
+	
+<hr>
+
+<jsp:text>
+        <![CDATA[Project done by Swapnil Pal]]>
+</jsp:text>
 </body>
 </html>
