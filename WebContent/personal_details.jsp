@@ -49,7 +49,7 @@
     <tr><td>Last Name:</td> <td><input type="text" name="LN" required/></td></tr>
     <tr><td>Email:</td> <td><input type="email" name="EM" required/></td></tr>
     <tr><td>Age:</td> <td><input type="number" name="Age" required/></td></tr>
-    <tr><td>Contact Number:</td> <td><input type="number" name="CN" size="10" required/></td></tr>
+    <tr><td>Contact Number:</td> <td><input type="number" name="CN" size="10" pattern="[1-9]{1}[0-9]{9}" required/></td></tr>
     <tr><td><label for="GID">Government ID: </label></td>
 			<td>
 				<select name="GID" id="GID" required>
@@ -61,7 +61,7 @@
  				<option value="license" >Driving License</option>
 				</select>
 			</td>
-			<tr><td></td><td><input type="number" name="GIDN" required/></td>
+			<tr><td></td><td><input type="text" name="GIDN" required/></td>
 		</tr>   	
 		<tr><td>Address:</td> <td><input type="text" name="AD" required/></td></tr>
     	<tr><td>Country:</td> <td><input type="text" name="CT" required/></td></tr>

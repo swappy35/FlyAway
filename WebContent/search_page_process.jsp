@@ -79,6 +79,13 @@ table, th, td {
  				</table>
    			</center>
 		</c:when>
+		<c:when test="${param.Src_City == param.Dest_City}">
+			<center>
+				<c:out value="No results as Source and Destination city is same."/>
+				<br> 
+				Go<a href="search_page.jsp"> back </a>and try again. 
+			</center>
+		</c:when>
 		<c:when test="${empty SPP.rows}">
 			<center>
 				<c:out value="Null"></c:out>

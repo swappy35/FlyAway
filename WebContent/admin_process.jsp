@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Admin Process</title>
+<title>Admin Page</title>
 </head>
 <body>
 	<!-- Connection setup -->
@@ -35,12 +35,21 @@
     </c:forEach>
 	
 	<!-- Checking email and password --> 	
-	<c:choose>  
-		<c:when test="${empty Adm}">  
-       		Fill the credentials. 
-    	</c:when> 
+	<c:choose>
     	<c:when test="${Edb == E && Pdb == P}">  
-       		Login Successful. 
+    	<center>
+       		<h1>Welcome to Admin Control</h1>
+       		<h2>Click on the below tabs<br>to check the tables</h2>
+       		<h3>
+       		<a href="flight_details_table.jsp">Flight Details Table</a>
+       		&emsp;&emsp;
+       		<a href="personal_details_table.jsp">Personal Details Table</a>
+       		<br><br>
+       		<a href="booking_details_table.jsp">Booking Details Table</a>
+       		&emsp;&emsp;
+       		<a href="user_login_table.jsp">User Login Details Table</a>
+       		</h3>
+       	</center>	
     	</c:when>  
     	<c:when test="${Edb == E && Pdb != P}">  
         	Wrong Password & try again.

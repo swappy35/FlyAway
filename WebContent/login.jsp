@@ -25,6 +25,8 @@
         &emsp;&emsp;
         <input type="reset" value="Reset" />
     </form>
+    <br>
+    	<a href="pass_change.jsp">Forgotten Password?</a>
     </center>
 </body>
 </html>
