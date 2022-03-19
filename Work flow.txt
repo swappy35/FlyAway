@@ -1,0 +1,28 @@
+A welcome page having 3 options:
+•	Admin Page
+•	User registration Page
+•	User Login Page
+
+After User Login Page, Search Page: 
+•	Date of travel
+•	Source city
+•	Destination city
+•	The number of persons.
+
+Flight Details Page:
+Based on the travel details entered on "Search Page", it will show the available flights with their:
+•	Flight No.
+•	Airline Name
+•	Ticket Price
+•	Source/Destination City with Date and Time
+•	Total, Booked and Available Seats
+
+
+Register Page / Personal Details Page: 
+After selection of Flight, user will be taken to fill personal detail.
+
+Review and Payment Page: 
+In this the user will be shown his/her personal details filled and the flight details which they have booked. Then the user has to click on the payment picture (dummy payment gateway) to complete the booking on the flight.
+
+Confirmation Page:
+It will show the Thank You message.
